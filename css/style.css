@@ -1,0 +1,485 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+html, body{
+    margin: 0%;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+}
+
+/* CSS Variables */ 
+
+:root{
+    --primary-color: #4458dc;
+    --primary-color2: #854fee;
+    --title-color: #141313;
+    --text-color: #777777;  
+    --border-color: #201f1f17;  
+    --gradient-color: linear-gradient(90deg, #4458dc 0%, #854fee 100%);
+    --shadow-color:  0px 10px 30px rgba(118, 85, 225, 0.3);
+    --box-shadow: 0px 10px 30px rgba(57, 56, 61, 0.205);
+   
+
+    /* font family variables. */ 
+    --poppins: "Poppins", sans-serif;
+}
+/* Global Classes */ 
+
+.title-text{
+    font: normal bold 50px/ 72px var(--poppins);
+}
+
+.text-uppercase{
+    text-transform: uppercase;
+}
+
+/* Buttons */ 
+
+.button{
+    padding: .8rem 2.2rem;
+    font: normal 500 16px/20px var(--poppins);
+    position: relative;
+    border: 3px solid transparent;
+    border-radius: 4px;
+}
+
+.button.primary-button{
+    background: var(--gradient-color);
+    background-clip: padding-box;
+    color: whitesmoke;
+    -webkit-transition: background .6s ease;
+    transition: background .6s ease;
+    box-shadow: var(--box-shadow);
+    margin-right: 10px;
+}
+
+.button.primary-button:hover{
+    background: whitesmoke;
+    background-clip: padding-box;
+    color: black;
+}
+
+.button.primary-button::after, .button.secondary-button::after{
+    position: absolute;
+    top: -2px; 
+    left: -2px;
+    bottom: -2px; 
+    right: -2px;
+    background: var(--gradient-color);
+    content: ' ';
+    z-index: -1;
+    border-radius: 4px;
+}
+
+.button.secondary-button{
+    background: white;
+    background-clip: padding-box;
+    -webkit-transition: background .6s ease;
+    transition: background .6s ease;
+}
+
+.button.secondary-button:hover{
+    background: var(--gradient-color);
+    color: whitesmoke;
+    box-shadow: var(--box-shadow);
+}
+
+p.para{
+    color: var(--text-color);
+    font: normal 500 16px/ 25px var(--poppins);
+}
+
+.font-poppins{
+    font-family: var(--poppins);
+}
+
+button:focus,
+button:active
+button:hover
+.btn:active,
+.btn.active{
+    outline: 0px !important;
+    box-shadow: none !important;
+}
+
+.title-h1{
+    font: normal bold 39px/ 40px var(--poppins);
+}
+a{
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    text-decoration: none;
+}
+/*==========NAVBAR CSS START==========*/
+.header-area .navbar-brand{
+    padding: 0 2rem 0 2rem;
+}
+.header-area .main-menu .nav-item .nav-link{
+    font-family:var(--poppins);
+    text-transform: uppercase;
+    font-weight: 500;
+    color:var(--title-color);
+}
+.header-area .main-menu .navbar-nav .active a{
+    background:var(--gradient-color);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+.header-area .main-menu .navbar-nav a:hover{
+    background:var(--gradient-color);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+.navbar-nav .nav-item.current .nav-link{
+    background:var(--gradient-color);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+.is-sticky .navbar{
+  background: #ffffff;
+  box-shadow: var(--box-shadow);
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+/*==========NAVBAR CSS END==========*/
+
+/*==========BANNER CSS START==========*/
+.banner{
+    background:url(../img/banner/home-banner.png) no-repeat 0% 50%;
+    background-position: center;
+    background-size: cover;
+    height: 100%;
+}
+.banner h3{
+    padding-top: 35%;
+    font-weight: 500;
+}
+.banner h3::after{
+    content: "";
+    height: 2px;
+    width: 18vw;
+    background: #000;
+    display: inline-block;
+    margin-left: 5%;
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+    z-index: -5;
+}
+.banner h1{
+    font-size: 5rem;
+}
+.banner h4{
+    font-size: 1.5rem;
+}
+.banner .banner-img img{
+        padding: 5rem 0;
+}
+/*==========BANNER CSS END==========*/
+/*========== AREA CSS START==========*/
+.about-area{
+    padding: 8rem 5rem;
+}
+.about-area .about-title h2 span{
+    display:block;
+    font:normal bold 49px/60px var(--poppins);
+    letter-spacing: 15px;
+}
+
+/*========== AREA CSS END==========*/
+
+/*=========== Start Brand Area ===========*/ 
+
+.brand-area{
+    padding: 1rem 20rem;
+    margin-bottom: 4rem;
+}
+
+.brand-area .first-row .col-lg-4{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+}
+
+ .brand-area .first-row .col-lg-4 .single-brand{
+    border: 1px solid var(--border-color);
+    text-align: center;
+    padding: 1.8rem 0rem;
+    margin: .9rem 0;
+    width: 180px;
+    height: 100px;
+    cursor: pointer;
+    -webkit-transition: -webkit-transform .4s ease;
+    transition: -webkit-transform .4s ease;
+    transition: transform .4s ease;
+    transition: transform .4s ease, -webkit-transform .4s ease;
+}
+
+ .brand-area .first-row .col-lg-4 .single-brand img{
+    width: 50%;
+}
+ .brand-area .first-row .col-lg-4 .single-brand:hover{
+    box-shadow: var(--box-shadow);
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+}
+
+.brand-area .first-row .col-lg-4 .single-brand:hover img{
+    -webkit-filter: brightness(0.15);
+            filter: brightness(0.15);
+}
+
+.brand-area .experience-area{
+    padding-left: 1rem;
+    position: relative;
+}
+
+.brand-area .experience-area span{
+    display: block;
+}
+
+.brand-area .experience-area .years-area{
+    background: url(../img/client-info-bg.png) no-repeat 45px 20px;
+    padding: 2rem 0;
+    width: 40rem;
+    height: 18rem;
+    padding-left: 8rem;
+}
+
+.brand-area .experience-area .bg-panel{
+    position: absolute;
+    left: -190px; 
+    top: 0%;
+    background:pink;
+    width: 400px;
+    height: 400px;
+    margin-left: 340px;
+    z-index: -1;
+}
+
+.brand-area .experience-area .years-area .years{
+    font: normal bold 84px/40px var(--poppins);
+    color: var(--primary-color2);
+    z-index: 2;
+}
+.brand-area .experience-area .years-area h2.years{
+    font-size:5rem;
+
+}
+
+.brand-area .experience-area .years-area h2 span{
+    font: normal 600 22px/30px var(--poppins);
+}
+
+.brand-area .experience-area .call-area{
+    padding-left: 10rem;
+}
+
+/*========== End Brand Area =============*/ 
+/*=========== Services Area ===========*/ 
+
+.services-area{
+    padding: 7rem 2rem;
+}
+.services-area .services-title{
+    padding: 0 14rem;
+}
+.services-area .services-title h1{
+    font-size: 35px;
+}
+.services-area .services{
+    background: rgba(248, 252, 253, 0.973);
+    padding: 2rem 0;
+    width: 16rem;
+    margin: 5rem .5rem;
+    -webkit-transition: box-shadow .7s ease;
+    transition: box-shadow .7s ease;
+}
+
+.services-area .services:hover{
+    box-shadow: var(--box-shadow);
+}
+/* ============End Services Area ===========*/ 
+
+/*============ Project Area============ */ 
+
+.project-area{
+    padding: 4rem 0;
+}
+
+.project-area .button-group button{
+    background: transparent;
+    border: none;
+    font: normal 500 16px/130px var(--poppin);
+    text-transform: uppercase;
+}
+
+.project-area .button-group button + button{
+    padding-left: 3rem;
+}
+.project-area .img img{
+    height: 300px;
+    width: 500px;
+}
+.project-area .grid .our-project > .title h4{
+    font: normal 700 25px/12px var(--poppin);
+}
+.our-project{
+    position: relative;
+    color: #fff;
+}
+.title{
+    position: absolute;
+    content: "";
+    text-align: center;
+    background-color:rgba(0,0,0,0.8);
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%) scale(0);
+            transform: translate(-50%, -50%) scale(0);
+    opacity: 0;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+.our-project:hover .title{
+    opacity: 1;
+    -webkit-transform:translate(-50%,-50%) scale(1.5);
+            transform:translate(-50%,-50%) scale(1.5);
+}
+.project-area .mix{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.project-area button.mixitup-control-active{
+    color:deeppink;
+}
+/*============ End Project Area ============*/ 
+/*================== Testimonial Area Start================== */ 
+
+.testimonials-area .about-title p{
+    padding: 1rem 7rem;
+}
+
+.testimonials-area .client{
+    background: #ffffff10;
+    box-shadow: var(--box-shadow);
+    margin: 3rem 0rem;
+}
+
+.testimonials-area .client .client-img{
+    padding: 2rem;
+}
+
+.testimonials-area .client .about-client{
+    padding-top: 2rem;
+}
+
+.testimonials-area .client .about-client h4{
+    font: normal 500 21px/ 20px var(--poppins);
+}
+
+.testimonials-area .client .about-client p{
+    font-size: 14px;
+}
+
+.testimonials-area .owl-carousel .owl-item{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 0 1.5rem;
+}
+
+.testimonials .owl-carousel .owl-dots .owl-dot.active span{
+    background: var(--primary-color);
+    width: 12px;
+    height: 12px;
+}
+
+/*================== End Testimonials Area================== */ 
+/*=============== Subscribe me ===============*/ 
+
+ .subscribe-us-area .subscribe{
+    background: url(../img/subscribe-bg.png) no-repeat;
+    padding: 10rem 0;
+    margin: 3rem auto;
+}
+
+ .subscribe-us-area .subscribe .subscribe-title h4{
+    font: normal 700 30px/ 30px var(--roboto);
+    color: whitesmoke;
+}
+
+ .subscribe-us-area .subscribe .subscribe-title p{
+    color: whitesmoke;
+    padding: 1rem 4rem;
+}
+
+ .subscribe-us-area .subscribe form .input-textbox input{
+    width: 400px;
+    padding: 1.5rem 1rem;
+    border: 1px solid whitesmoke;
+    background: transparent;
+    color: white;
+    font: normal 500 17px/20px var(--roboto);
+}
+
+ .subscribe-us-area .subscribe form .input-textbox input::-webkit-input-placeholder{
+    color: whitesmoke;
+}
+
+ .subscribe-us-area .subscribe form .input-textbox input::-moz-placeholder{
+    color: whitesmoke;
+}
+
+ .subscribe-us-area .subscribe form .input-textbox input:-ms-input-placeholder{
+    color: whitesmoke;
+}
+
+ .subscribe-us-area .subscribe form .input-textbox input::placeholder{
+    color: whitesmoke;
+}
+
+ .subscribe-us-area .subscribe form .btn-submit button{
+    background: whitesmoke;
+    color: #000;
+    padding: .7rem 2rem;
+}
+.subscribe-us-area .btn-submit{
+    margin-top: 10px;
+}
+/*=============== End subscribe me=============== */ 
+
+/*=============== Footer Area=============== */ 
+
+footer.footer-area{
+    padding: 5rem 0;
+    background: url(../img/footer-bg.png) no-repeat;
+}
+
+footer.footer-area .social h5{
+    font: normal 500 23px/ 30px var(--poppins);
+}
+
+footer.footer-area .social a{
+    font-size:22px;
+    padding:2rem;
+    color: var(--border-color);
+}
+.footer-area .para{
+    margin-top: 1rem;
+}
+footer.footer-area .social a:hover{
+    color: var(--primary-color);
+}
+
+
+/*=============== End Footer=============== */
